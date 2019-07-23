@@ -6,7 +6,7 @@ This demo shows how to call online screenshot machine API using Node.js - JavaSc
 
 Install Node.js package:
 
-```node
+```javascript
 npm install screenshotmachine --save
 ```
 
@@ -14,14 +14,14 @@ First, you need to create a free/premium account at [www.screenshotmachine.com](
 
 Set-up your customer key and secret phrase (if needed) in the script:
 
-```node
+```javascript
 var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     secretPhrase = ''; //leave secret phrase empty, if not needed
 ```
 
 Set other options to fulfill your needs: 
 
-```node
+```javascript
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
@@ -38,7 +38,7 @@ More info about options can be found in our [API guide](https://www.screenshotma
  Sample code
 -----
 
-```node
+```javascript
 var screenshotmachine = require('screenshotmachine');
 
 var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
@@ -63,7 +63,7 @@ Generated ```apiUrl```  link can be placed in ```<img>``` tag or used in your bu
 
 If you need to store captured screenshot as an image, just call:
 
-```node
+```javascript
 var screenshotmachine = require('screenshotmachine');
 
 var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
