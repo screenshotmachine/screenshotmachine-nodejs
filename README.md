@@ -24,7 +24,7 @@ Set other options to fulfill your needs:
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API guide for more details
+      // all next parameters are optional, see our API doc for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -46,7 +46,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API guide for more details
+      // all next parameters are optional, see our API doc for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -72,7 +72,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API guide for more details
+      // all next parameters are optional, see our API doc for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
