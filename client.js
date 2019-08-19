@@ -10,7 +10,8 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
       device : 'desktop',
       format: 'png',
       cacheLimit: '0',
-      delay: '200'
+      delay: '200',
+      zoom: '100'
     }
 
 var apiUrl = screenshotmachine.generateApiUrl(customerKey, secretPhrase, options);
