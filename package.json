@@ -1,16 +1,22 @@
 {
   "name": "screenshotmachine",
-  "version": "1.1.0",
-  "description": "node.js API library for the ScreenshotMachine - online website capturing service",
+  "version": "1.1.1",
+  "description": "Capture website screenshots using ScreenshotMachine - online website screenshot generator and API",
   "main": "index.js",
   "keywords": [
     "screenshotmachine",
     "screenshots",
+    "screenshot",
     "fullpage",
     "webcapture",
     "headless",
-    "render"
-  ],  
+    "render",
+    "website",
+    "html",
+    "image",
+    "browser",
+    "capture"
+  ],
   "author": "Marek Knaze",
   "license": "ISC",
   "dependencies": {
