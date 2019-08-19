@@ -1,6 +1,5 @@
 # screenshotmachine-nodejs
-
-This demo shows how to call online screenshot machine API using Node.js - JavaScript run-time environment.
+Capture website screenshots using ScreenshotMachine - online website screenshot generator and API.
 
 ## Installation
 
