@@ -30,7 +30,8 @@ Set other options to fulfill your needs:
       device : 'desktop',
       format: 'png',
       cacheLimit: '0',
-      delay: '200'
+      delay: '200',
+      zoom: '100'
     }
 ```
 More info about options can be found in our [API doc](https://www.screenshotmachine.com/api.php).  
