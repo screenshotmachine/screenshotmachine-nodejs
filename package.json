@@ -1,10 +1,9 @@
 {
   "name": "screenshotmachine",
-  "version": "1.1.1",
-  "description": "Capture website screenshots using ScreenshotMachine - online website screenshot generator and API",
+  "version": "2.0.0",
+  "description": "Captures website screenshot and converts website to PDF using Screenshot machine - online website screenshot generator and website to PDF converter",
   "main": "index.js",
   "keywords": [
-    "screenshotmachine",
     "screenshots",
     "screenshot",
     "fullpage",
@@ -13,9 +12,12 @@
     "render",
     "website",
     "html",
-    "image",
-    "browser",
-    "capture"
+    "capture",
+    "pdf",
+    "screen capture",
+    "pdf generation",
+    "html-to-pdf",
+    "url-to-pdf"
   ],
   "author": "Marek Knaze",
   "license": "ISC",

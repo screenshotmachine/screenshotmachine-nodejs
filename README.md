@@ -1,5 +1,5 @@
 # screenshotmachine-nodejs
-Capture website screenshots using ScreenshotMachine - online website screenshot generator and API.
+Captures website screenshot and converts website to PDF using Screenshot machine - online website screenshot generator and website to PDF converter
 
 ## Installation
 
@@ -18,13 +18,14 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     secretPhrase = ''; //leave secret phrase empty, if not needed
 ```
 
-Set other options to fulfill your needs: 
+## Website screenshot API
+Set additional options to fulfill your needs:  
 
 ```javascript
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API doc for more details
+      // all next parameters are optional, see our website screenshot API doc for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -33,7 +34,7 @@ Set other options to fulfill your needs:
       zoom: '100'
     }
 ```
-More info about options can be found in our [API doc](https://www.screenshotmachine.com/api.php).  
+More info about options can be found in our [Website screenshot API](https://www.screenshotmachine.com/website-screenshot-api.php).
 
  Sample code
 -----
@@ -46,7 +47,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API doc for more details
+      // all next parameters are optional, see our website screenshot API guide for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -55,10 +56,10 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
       zoom: '100'
     }
 
-var apiUrl = screenshotmachine.generateApiUrl(customerKey, secretPhrase, options);
+var apiUrl = screenshotmachine.generateScreenshotApiUrl(customerKey, secretPhrase, options);
 
 //put link to your html code
-console.log('<img src="' + apiUrl + '">');   
+console.log('<img src="' + apiUrl + '">');  
 ```
 Generated ```apiUrl```  link can be placed in ```<img>``` tag or used in your business logic later.
 
@@ -72,7 +73,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API doc for more details
+      // all next parameters are optional, see our website screenshot API guide for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -81,7 +82,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
       zoom: '100'
     }
 
-var apiUrl = screenshotmachine.generateApiUrl(customerKey, secretPhrase, options);
+var apiUrl = screenshotmachine.generateScreenshotApiUrl(customerKey, secretPhrase, options);
 
 //save screenshot as an image
 var fs = require('fs');
@@ -92,6 +93,53 @@ screenshotmachine.readScreenshot(apiUrl).pipe(fs.createWriteStream(output).on('c
 ```
 
 Captured screenshot will be saved as ```output.png``` file in current directory.
+
+## Website to PDF API
+
+Set the PDF options: 
+```javascript
+    options = {
+      //mandatory parameter
+      url : 'https://www.google.com',
+      // all next parameters are optional, see our website to PDF API guide for more details
+      paper : 'letter',
+      orientation : 'portrait',
+      media: 'print',
+      bg: 'nobg',
+      delay: '2000',
+      scale: '50'
+    }
+```
+More info about options can be found in our [Website to PDF API](https://www.screenshotmachine.com/website-to-pdf-api.php).
+
+#### Sample code
+```javascript
+var screenshotmachine = require('screenshotmachine');
+
+var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
+    secretPhrase = ''; //leave secret phrase empty, if not needed
+    options = {
+      //mandatory parameter
+      url : 'https://www.google.com',
+      // all next parameters are optional, see our website to PDF API guide for more details
+      paper : 'letter',
+      orientation : 'portrait',
+      media: 'print',
+      bg: 'nobg',
+      delay: '2000',
+      scale: '50'
+    }
+
+var pdfApiUrl = screenshotmachine.generatePdfApiUrl(customerKey, secretPhrase, options);
+
+//save PDF file
+var fs = require('fs');
+var output = 'output.pdf';
+screenshotmachine.readScreenshot(pdfApiUrl).pipe(fs.createWriteStream(output).on('close', function() {
+  console.log('Pdf saved as ' + output);
+}));
+```
+Captured PDF will be saved as ```output.pdf``` file in the current directory.
 
 # License
 

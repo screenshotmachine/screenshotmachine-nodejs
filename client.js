@@ -5,7 +5,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
     options = {
       //mandatory parameter
       url : 'https://www.google.com',
-      // all next parameters are optional, see our API guide for more details
+      // all next parameters are optional, see our website screenshot API guide for more details
       dimension : '1366xfull', // or "1366xfull" for full length screenshot
       device : 'desktop',
       format: 'png',
@@ -14,7 +14,7 @@ var customerKey = 'PUT_YOUR_CUSTOMER_KEY_HERE';
       zoom: '100'
     }
 
-var apiUrl = screenshotmachine.generateApiUrl(customerKey, secretPhrase, options);
+var apiUrl = screenshotmachine.generateScreenshotApiUrl(customerKey, secretPhrase, options);
 
 //put link to your html code
 console.log('<img src="' + apiUrl + '">');
